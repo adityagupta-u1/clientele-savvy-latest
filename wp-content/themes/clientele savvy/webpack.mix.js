@@ -2,7 +2,7 @@ let mix = require('laravel-mix');
 require('laravel-mix-polyfill');
 
 mix.js('src/js/app.js', 'dist/js')
-   .sass('src/css/_style.scss', 'dist/css')
+   .sass('src/css/style.scss', 'dist/css')
    .polyfill({
       enabled: true,
       useBuiltIns: "usage",
