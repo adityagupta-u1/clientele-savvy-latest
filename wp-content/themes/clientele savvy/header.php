@@ -9,4 +9,15 @@
     <?php wp_head();?>
 </head>
 <body>
-<h1>ankit gupta clientele savvy</h1>
+<!--start of header-->
+<header class="header">
+    <nav class="nav">
+        <ul class="nav-links">
+            <li class="nav-links__list">home</li>
+            <li class="nav-links__list">about</li>
+            <li class="nav-links__list">blog</li>
+            <li class="nav-links__list">contact</li>
+        </ul>
+    </nav>
+</header>
+<!--end of header-->
