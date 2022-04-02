@@ -9,4 +9,4 @@
     <?php wp_head();?>
 </head>
 <body>
-<h1>yeah hi my name is alex </h1>
+<h1>yeah </h1>
