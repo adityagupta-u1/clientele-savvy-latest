@@ -24,5 +24,8 @@
 .brand{
     &-logo{
         width: 6rem;
+        img{
+            width: 100%;
+        }
     }
 }
