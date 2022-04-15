@@ -1,4 +1,45 @@
 <?php
+      use PHPMailer\PHPMailer\PHPMailer;
+
+  
+      require_once "PHPMailer/PHPMailer.php";
+      require_once "PHPMailer/SMTP.php";
+      require_once "PHPMailer/Exception.php";
+  
+    
+      $mail = new PHPMailer(true);
+      if(isset($_POST['email']) && $_POST['email']!=''){
+  
+        $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $number = $_POST['number'];
+  
+        if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+          $mail->SMTPDebug = 4;                          
+          try{             
+          $mail->isSMTP();   
+          $mail-> SMTPAuth = false;                         
+          $mail->Port      = 25;
+          $mail->Host      = 'localhost';
+          $mail->Username  = "clientelesavvy@clientelesavvy.com";
+          $mail->Password  = "8381923988@a";
+
+          $mail->IsSendmail();
+  
+          $mail->setFrom($userEmail,$userName);           
+          $mail->addAddress('clientelesavvy@gmail.com');
+          $mail->isHTML(true);                                  
+          $mail->Body    = "From clientelesavvy the name is"." ".$username."the email is ".$email; 
+    
+    
+          $mail->send();
+  
+          }catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+          }
+          
+        }
+      }
     get_header();
 ?>
 <!-- start of home section -->
@@ -53,10 +94,10 @@
                             rem possimus!
                         </p>
                     </div>
-                    <form action="#" method="post" class="form">
-                        <input class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
-                        <input class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
-                        <input class="form-input text-input" type="email" placeholder="Email" maxlength="40">
+                    <form action="" method="post" class="form">
+                        <input name="name" class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
+                        <input name="number" class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
+                        <input name="email" class="form-input text-input" type="email" placeholder="Email" maxlength="40">
                         <button class="btn btn-lined">
                             <a href="#">submit</a>
                             <img src="<?php echo get_theme_file_uri("/image/arrow.svg"); ?>" alt="">
