@@ -1,0 +1,75 @@
+.work{
+    width: 100%;
+    height: auto;
+    padding: 10rem;
+    background-color: $secondary-yellow-light;
+    border-top: 2px solid $primary-blue-dark;
+    border-bottom: 2px solid $primary-blue-dark;
+    &-container{
+        width: 100%;
+        height: auto;
+    }
+
+    &-col{
+        &__text{
+            height: 72rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            .work-list{
+                margin-bottom: 3.6rem !important;
+                &-items{
+                    color: $primary-blue-dark;
+                    font-family: 'Poppins',sans-serif;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    font-size: 2.4rem;
+                    .list-vector{
+                        margin-right: 2.4rem;
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 5.6rem;
+                    }
+                }
+            }
+            h1{
+                margin-bottom: 3.6rem;
+            }
+
+        }
+        &__img{
+            position: relative;
+            .work-img{
+                position: absolute;
+                top: 18rem;
+                right:20rem;
+                height: 55rem;
+                &__background{
+                    position: absolute;
+                    height: 55rem;
+                    &-1{
+                        top: 0;
+                        right: 0;
+                    }
+                    &-2{
+                        top: 3rem;
+                        right: 5rem;
+                    }
+                    &-3{
+                        top: 7rem;
+                        right: 9rem;
+                    }
+                    &-4{
+                        top: 9.8rem;
+                        right: 11.9rem;
+                    }
+                    &-5{
+                        top: 14rem;
+                        right: 16rem;
+                    }
+                }
+            }
+        }
+    }
+}

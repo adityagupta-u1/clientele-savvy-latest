@@ -1,0 +1,65 @@
+.contact{
+    width:100%;
+    height: auto;
+    padding: 10rem;
+    background-color: $secondary-red-light;
+    border-top: 2px solid $primary-blue-dark;
+    border-bottom: 2px solid $primary-blue-dark;
+    &-section{
+        width: 100%;
+        height: auto;
+    }
+    &-col{
+        &__img{
+            padding-right: 4rem;
+            position: relative;
+            .contact-img{
+                position: absolute;
+                height: 55rem;
+                top:18rem;
+                left: 20rem;
+
+                &__background{
+                    height: 55rem;
+                    position: absolute;
+                    &-1{
+                        top: 0;
+                        left: 0;
+                    }
+                    &-2{
+                        top: 3rem;
+                        left: 5rem;
+                    }
+                    &-3{
+                        top: 7rem;
+                        left: 9rem;
+                    }
+                    &-4{
+                        top: 9.8rem;
+                        left: 11.9rem;
+                    }
+                    &-5{
+                        top: 14rem;
+                        left: 16rem;
+                    }
+                }
+            }
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 8rem;
+            height: 80rem;
+            .contact-text-container{
+                h1{
+                    width: 80%;
+                    margin-bottom: 2.4rem;
+                }
+                p{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

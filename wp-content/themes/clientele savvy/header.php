@@ -12,11 +12,16 @@
 <!--start of header-->
 <header class="header">
     <nav class="nav">
+        <div class="brand">
+            <div class="brand-logo">
+                <img src="<?php echo get_theme_file_uri("./image/clientelesavvy-logo.svg"); ?>" alt="">
+            </div>
+        </div>
         <ul class="nav-links">
-            <li class="nav-links__list">home</li>
-            <li class="nav-links__list">about</li>
-            <li class="nav-links__list">blog</li>
-            <li class="nav-links__list">contact</li>
+            <li class="nav-links__list text-small">home</li>
+            <li class="nav-links__list text-small">about</li>
+            <li class="nav-links__list text-small">blog</li>
+            <li class="nav-links__list text-small">contact</li>
         </ul>
     </nav>
 </header>

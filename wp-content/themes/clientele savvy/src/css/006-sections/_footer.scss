@@ -1,0 +1,57 @@
+.footer{
+    width: 100%;
+    height: 75rem;
+
+    &-container{
+        width: 100%;
+        height: 100%;
+        background-color: $primary-white;
+        padding: 10rem ;
+    }
+    &-row{
+        width: 100%;
+        height: 100%;
+    }
+    &-col{
+        &__text{
+            h1{
+                font-weight: 500;
+                margin-bottom: 2.4rem;
+            }
+            p{
+                text-transform: capitalize;
+                margin-bottom: 2.4rem;
+                width:80%;
+            }
+            .contact-details{
+                text-transform: capitalize;
+            }
+            
+        }
+        &__img{ 
+            @include flex;
+            flex-direction: column;
+            img{
+                margin-bottom: 8rem;
+            }
+            .social{
+                @include flex;
+                &-links{
+                    &:not(:last-child){
+                        margin-right: 6.4rem;
+                    }
+                }
+            }
+        }
+    }
+    &-copyright{
+        font-size: 1.6rem;
+        font-family: 'Lora',serif;
+        font-weight: 700;
+        color: $primary-blue-dark;
+        padding: 2rem 10rem;
+        text-align: center;
+        border-top: 2px solid $primary-blue-dark;
+    }
+
+}

@@ -1,3 +1,27 @@
-h1{
-    color: beige;
-}
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+//bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+//001-helpers
+@import "/src/css/001-helpers/functions";
+@import "/src/css/001-helpers/mixins";
+@import "/src/css/001-helpers/variables";
+//002-tools
+//003-basic
+@import "/src/css/003-basic/base";
+@import "/src/css/003-basic/buttons";
+@import "/src/css/003-basic/typography";
+@import "/src/css/003-basic/utilities";
+//004-layout
+@import "/src/css/004-layout/nav";
+//005-modules
+@import "/src/css/005-modules/form";
+//06-sections
+@import "/src/css/006-sections/home";
+@import "/src/css/006-sections/contact";
+@import "/src/css/006-sections/services";
+@import "/src/css/006-sections/work";
+@import "/src/css/006-sections/contact-us";
+@import "/src/css/006-sections/footer";
+//07-pages

@@ -1,0 +1,78 @@
+.header{
+
+    &-title{
+        font-family:'Lora',serif;
+        color:$primary-blue-dark;
+        font-size: 7.2rem;
+        line-height:145%;
+        font-weight:500;
+        text-transform: capitalize;
+    }
+
+    &-primary{
+        font-family:'Lora',serif;
+        color:$primary-blue-dark;
+        font-size:6.4rem;
+        line-height:145%;
+        font-weight:700;
+        text-transform: capitalize;
+    }
+
+    &-secondary{
+        font-family:'Lora',serif;
+        color:$primary-blue-dark;
+        font-size:3.6rem;
+        line-height:135%;
+        font-weight:700;
+        text-transform: capitalize;
+    }
+
+    &-tertiary{
+        font-family:'Lora',serif;
+        color:$primary-blue-dark;
+        font-size:3.2rem;
+        line-height:145%;
+        font-weight:700;
+        text-transform: capitalize;
+    }
+}
+
+.text{
+
+    &-para{
+        font-family: "Poppins", sans-serif;
+        color: $primary-blue-dark;
+        font-size: 2rem;
+        line-height: 160%;
+        font-weight: 500;
+        text-transform: lowercase;
+    }
+
+    &-btn{
+        font-family:'Poppins',sans-serif;
+        color:$primary-blue-dark;
+        font-size:2.0rem;
+        line-height:160%;
+        font-weight:600;
+        text-transform: capitalize;
+
+    }
+    &-small{
+        font-family:'Lora',sans-serif;
+        color:$primary-blue-dark;
+        font-size:1.6rem;
+        line-height:160%;
+        font-weight:500;
+        text-transform: capitalize;
+    }
+    &-input{
+        font-family: 'Lora',serif;
+        color: $primary-blue-dark;
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+}
+
+.italics{
+    font-style: italic;
+}

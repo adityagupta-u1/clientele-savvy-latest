@@ -1,0 +1,70 @@
+.home{
+    height: auto;
+    width: 100%;
+    &-container{
+        width: 100%;
+        height: auto;
+        padding:13rem 0 0 10rem;
+    }
+    &-col{
+        &__text{
+            h1{
+                margin-bottom:3.6rem;
+            }
+            p{
+                margin-bottom:3.6rem;
+                width: 52ch ;
+                line-height: 160%;
+                text-transform: capitalize;
+            }
+            .btn{
+                @include flex;
+            }
+        }
+        &__img{
+            padding: 0 10rem;
+            margin-top:-4rem;
+            position:relative;
+            z-index: 0;
+            height: 80rem;
+            .home-img{
+                position: absolute;
+                height: 87%;
+                top: -2rem;
+                right: 25%;
+                z-index: 3;
+            }
+            .home-vector{
+                position:absolute;
+                &__1{                    
+                    top: 6rem;
+                    left: 15%;
+                    z-index:4;
+                }
+                &__2{                    
+                    top: 2rem;
+                    right: 16rem;
+                }
+                &__3{
+                    height: 85%;                   
+                    right: 20%;
+                    z-index: 3;
+                    top: 4rem;
+                }
+            }
+            img{
+                margin-left:8rem;
+            }
+        }
+    }
+}
+
+.arrow{
+    img{
+        width: 2.4rem;
+        margin-left: 2rem;
+        &:hover{
+            box-shadow: -8px 8px solid $secondary-yellow-light;
+        }
+    }
+}

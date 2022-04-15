@@ -1,0 +1,52 @@
+.contact-us{
+    width: 100%;
+    height: auto;
+    padding: 10rem;
+    border-bottom: 2px solid $primary-blue-dark;
+    &-container{
+        width: 100%;
+        height: auto;
+    }
+    &-col{
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80rem;
+            .text-container{
+                h1{
+                    margin-bottom: 2.4rem;
+                }
+                p{
+                    width: 80%;
+                }
+            }
+            .form{
+                .btn{
+                    @include flex;
+                    img{
+                        background-color: $primary-white;
+                        width: 2.4rem;
+                        align-items: flex-end;
+                    }
+                }
+            }
+        }
+        &-img{
+            position: relative;
+            @include flex;
+            .contact-us{
+                &-background{
+                    position: absolute;
+                    height: 100%;
+                    top: 4rem;
+                    left: 27rem;
+                }
+                &-img{
+                    position: absolute;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

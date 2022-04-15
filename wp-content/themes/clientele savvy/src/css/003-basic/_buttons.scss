@@ -1,0 +1,21 @@
+.btn{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Martel-sans",sans-serif;
+    color: $primary-blue-dark;
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    a{
+        color:$primary-blue-dark;
+        font-family: 'lora',serif;
+    }
+    &-lined{
+        border-radius:25rem;
+        border: 1px solid $primary-blue-dark;
+    }
+    &-yellow{
+        border-radius: 25rem;
+        padding: 2rem 5rem;
+        background-color: $secondary-yellow;
+    }
+}
