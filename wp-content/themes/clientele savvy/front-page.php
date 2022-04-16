@@ -1,45 +1,48 @@
 <?php
-      use PHPMailer\PHPMailer\PHPMailer;
+
+    use PHPMailer\PHPMailer\PHPMailer;
 
   
-      require_once "PHPMailer/PHPMailer.php";
-      require_once "PHPMailer/SMTP.php";
-      require_once "PHPMailer/Exception.php";
-  
-    
-      $mail = new PHPMailer(true);
-      if(isset($_POST['email']) && $_POST['email']!=''){
-  
-        $userName = $_POST['name'];
-        $userEmail = $_POST['email'];
-        $number = $_POST['number'];
-  
-        if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-          $mail->SMTPDebug = 4;                          
-          try{             
-          $mail->isSMTP();   
-          $mail-> SMTPAuth = false;                         
-          $mail->Port      = 25;
-          $mail->Host      = 'localhost';
-          $mail->Username  = "clientelesavvy@clientelesavvy.com";
-          $mail->Password  = "8381923988@a";
+    require_once "PHPMailer/PHPMailer.php";
+    require_once "PHPMailer/SMTP.php";
+    require_once "PHPMailer/Exception.php";
 
-          $mail->IsSendmail();
-  
-          $mail->setFrom($userEmail,$userName);           
-          $mail->addAddress('clientelesavvy@gmail.com');
-          $mail->isHTML(true);                                  
-          $mail->Body    = "From clientelesavvy the name is"." ".$username."the email is ".$email; 
-    
-    
-          $mail->send();
-  
-          }catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-          }
-          
-        }
-      }
+
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+
+    $userName = $_POST['name'];
+    $userEmail = $_POST['email'];
+    $userNumber = $_POST['number'];
+
+    try {
+        //Server settings       
+        $mail->isSMTP();   
+        $mail-> SMTPAuth = false;                         
+        $mail->Port      = 25;
+        $mail->Host      = 'localhost';
+        $mail->Username  = "clientelesavvy@clientelesavvy.com";
+        $mail->Password  = "8381923988@a";
+
+        $mail->IsSendmail();                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+        //Recipients
+        $mail->setFrom('clientelesavvy@clientelesavvy.com','clientelesavvy');
+        $mail->addAddress('beenagupta934@gmail.com');     //Add a recipient            //Name is optional
+
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Here is the subject';
+        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+   
     get_header();
 ?>
 <!-- start of home section -->
@@ -95,10 +98,10 @@
                         </p>
                     </div>
                     <form action="" method="post" class="form">
-                        <input name="name" class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
-                        <input name="number" class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
-                        <input name="email" class="form-input text-input" type="email" placeholder="Email" maxlength="40">
-                        <button class="btn btn-lined">
+                        <input id="name" name="name" class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
+                        <input id="number" name="number" class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
+                        <input id="email" name="email" class="form-input text-input" type="email" placeholder="Email" maxlength="40">
+                        <button id="btn" class="btn btn-lined">
                             <a href="#">submit</a>
                             <img src="<?php echo get_theme_file_uri("/image/arrow.svg"); ?>" alt="">
                         </button>
