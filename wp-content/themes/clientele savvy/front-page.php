@@ -34,7 +34,7 @@
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Here is the subject';
-            $mail->Body    = "name is" .$userName." and email is " ".$userEmail;
+            $mail->Body    = "From"." ".$userName.":".$userNumber;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
