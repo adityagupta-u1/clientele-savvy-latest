@@ -28,13 +28,13 @@
 
             //Recipients
             $mail->setFrom('clientelesavvy@clientelesavvy.com','clientelesavvy');
-            $mail->addAddress('beenagupta934@gmail.com');     //Add a recipient            //Name is optional
+            $mail->addAddress('ankit.gupta@clientelesavvy.com');     //Add a recipient            //Name is optional
 
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->Body    = "name is" .$userName." and email is " ".$userEmail;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
