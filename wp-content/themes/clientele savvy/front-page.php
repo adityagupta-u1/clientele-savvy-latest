@@ -10,35 +10,36 @@
 
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
+    if(isset($_POST['email']) && $_POST['email']!=''){
+        $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $userNumber = $_POST['number'];
 
-    $userName = $_POST['name'];
-    $userEmail = $_POST['email'];
-    $userNumber = $_POST['number'];
+        try {
+            //Server settings       
+            $mail->isSMTP();   
+            $mail-> SMTPAuth = false;                         
+            $mail->Port      = 25;
+            $mail->Host      = 'localhost';
+            $mail->Username  = "clientelesavvy@clientelesavvy.com";
+            $mail->Password  = "8381923988@a";
 
-    try {
-        //Server settings       
-        $mail->isSMTP();   
-        $mail-> SMTPAuth = false;                         
-        $mail->Port      = 25;
-        $mail->Host      = 'localhost';
-        $mail->Username  = "clientelesavvy@clientelesavvy.com";
-        $mail->Password  = "8381923988@a";
+            $mail->IsSendmail();                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-        $mail->IsSendmail();                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-        //Recipients
-        $mail->setFrom('clientelesavvy@clientelesavvy.com','clientelesavvy');
-        $mail->addAddress('beenagupta934@gmail.com');     //Add a recipient            //Name is optional
+            //Recipients
+            $mail->setFrom('clientelesavvy@clientelesavvy.com','clientelesavvy');
+            $mail->addAddress('beenagupta934@gmail.com');     //Add a recipient            //Name is optional
 
 
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Here is the subject';
-        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Here is the subject';
+            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-        $mail->send();
-    } catch (Exception $e) {
+            $mail->send();
+        } catch (Exception $e) {
+        }
     }
    
     get_header();
