@@ -38,11 +38,7 @@
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'Message has been sent';
-
-        header('location:http://clientelesavvy.com/');
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
    
     get_header();
@@ -51,7 +47,7 @@
     <section class="home margin-bottom-big">
         <div class="container-fluid home-container">
             <div class="row">
-            <div class="home-col__text col-5">
+            <div class="home-col__text col-12">
                 <h1 class="header-title">
                     <span class="italics">apply</span> for a job where it <span class="italics">counts</span>
                 </h1>
@@ -68,11 +64,8 @@
                     </a>
                 </button>
             </div>
-            <div class="home-col__img col-7">
-                <img class="home-vector home-vector__1"src="<?php echo get_theme_file_uri("/image/home-img-background-2.svg"); ?>" alt="">
-                <img class="home-vector home-vector__2"src="<?php echo get_theme_file_uri("/image/home-img-background-3.svg"); ?>" alt="">
-                <img class="home-vector home-vector__3"src="<?php echo get_theme_file_uri("/image/home-img-background-1.svg"); ?>" alt="">
-                <img class="home-img" src="<?php echo get_theme_file_uri("/image/home-img.png"); ?>" alt="">
+            <div class="home-col__img col-12">
+                <img class="home-img" src="<?php echo get_theme_file_uri("/image/home-img.svg"); ?>" alt="">
             </div>
             </div>
         </div>
@@ -82,16 +75,10 @@
     <section class="contact">
         <div class="container-fluid contact-section">
             <div class="row contact-row">
-                <div class="contact-col__img col-6">
-                    
-                    <img class="contact-img__background contact-img__background-1 " src="<?php echo get_theme_file_uri("/image/contact-1__background.jpg"); ?>" alt="">
-                    <img class="contact-img__background contact-img__background-2" src="<?php echo get_theme_file_uri("/image/contact-1__background.jpg"); ?>" alt="">
-                    <img class="contact-img__background contact-img__background-3" src="<?php echo get_theme_file_uri("/image/contact-1__background.jpg"); ?>" alt="">
-                    <img class="contact-img__background contact-img__background-4" src="<?php echo get_theme_file_uri("/image/contact-1__background.jpg"); ?>" alt="">
-                    <img class="contact-img__background contact-img__background-5" src="<?php echo get_theme_file_uri("/image/contact-1__background.jpg"); ?>" alt="">
-                    <img class="contact-col__img contact-img" src="<?php echo get_theme_file_uri("/image/contact-1.jpg"); ?>" alt="">
+                <div class="contact-col__img col-xl-6 col-lg-12">
+                    <img class="contact-col__img contact-img" src="<?php echo get_theme_file_uri("/image/contact-img.svg"); ?>" alt="">
                 </div>
-                <div class="contact-col__text col-6">
+                <div class="contact-col__text col-xl-6 col-lg-12">
                     <div class="contact-text-container">
                         <h1 class="header-primary">join the family of clientele savvy</h1>
                         <p class="text-para">Lorem ipsum dolor sit amet, consectetur 
