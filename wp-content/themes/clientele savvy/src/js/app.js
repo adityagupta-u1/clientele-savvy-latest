@@ -4,7 +4,7 @@ import './nav'
 import './animations'
 
 let loc = location.href
-let front_page = 'http://clientele-savvy.com/'
+let front_page = 'http://clientele-savvy.local/'
 
 if (loc == front_page) {
   document.getElementById('btn').addEventListener('click', (event) => {
@@ -15,7 +15,7 @@ if (loc == front_page) {
  
       if (loc == contact_us) {
         $.ajax({
-          url: 'http://clientelesavvy.com/',
+          url: 'http://clientele-savvy.local/',
           method: 'POST',
           dataType: 'json',
           data: {

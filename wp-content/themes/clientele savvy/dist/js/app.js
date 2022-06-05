@@ -3388,7 +3388,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var loc = location.href;
-var front_page = 'http://clientele-savvy.com/';
+var front_page = 'http://clientele-savvy.local/';
 
 if (loc == front_page) {
   document.getElementById('btn').addEventListener('click', function (event) {
@@ -3399,7 +3399,7 @@ if (loc == front_page) {
 
     if (loc == contact_us) {
       jquery__WEBPACK_IMPORTED_MODULE_1___default().ajax({
-        url: 'http://clientelesavvy.com/',
+        url: 'http://clientele-savvy.local/',
         method: 'POST',
         dataType: 'json',
         data: {

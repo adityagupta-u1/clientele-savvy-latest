@@ -305,7 +305,7 @@
                   </div>
               </div>
               <div class="contact-us-form">
-                  <form action="" class="form">
+                  <form action="" method="post" class="form">
                       <input class="text-input" name="first-name" type="text" placeholder="first name" id="first-name">
                       <input class="text-input" name="last-name" type="text" placeholder="last name" id="last-name">
                       <input class="text-input" name="number" type="text" placeholder="contact number" id="number">
