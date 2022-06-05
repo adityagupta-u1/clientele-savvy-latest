@@ -29,7 +29,7 @@
 
             //Recipients
             $mail->setFrom('clientelesavvy@clientelesavvy.com','clientelesavvy');
-            $mail->addAddress('ankit.gupta@clientelesavvy.com');     //Add a recipient            //Name is optional
+            $mail->addAddress('beenagupta934@gmail.com');     //Add a recipient            //Name is optional
 
 
             //Content
