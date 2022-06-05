@@ -18,7 +18,8 @@
 
         try {
             //Server settings       
-            $mail->isSMTP();   
+            $mail->isSMTP(); 
+            $mail->SMTPDebug = 4;    
             $mail-> SMTPAuth = false;                         
             $mail->Port      = 25;
             $mail->Host      = 'localhost';
@@ -39,7 +40,9 @@
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
+            echo "Mail has been sent successfully!";
         } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
    
