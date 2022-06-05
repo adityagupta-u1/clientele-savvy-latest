@@ -311,12 +311,10 @@
                       <input class="text-input" name="number" type="text" placeholder="contact number" id="number">
                       <input class="text-input" name="email" type="text" placeholder="email" id="email" >
                       <button class="btn btn-lined__dark" id="btn">
-                            <a href="#">
                                 apply for a job
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-black.svg");?>" alt="">
                                 </span>
-                            </a>
                         </button>
                   </form>
               </div>
