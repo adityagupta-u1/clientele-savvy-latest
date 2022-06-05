@@ -1,21 +1,73 @@
 .btn{
     font-size: 2rem;
-    font-weight: 600;
-    font-family: "Martel-sans",sans-serif;
-    color: $primary-blue-dark;
-    padding: 2rem 2.5rem;
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+    color: $primary-black;
+    padding: 1.5rem 3rem;
     text-transform: capitalize;
     a{
-        color:$primary-blue-dark;
-        font-family: 'lora',serif;
+        color:$primary-white;
+        font-family: 'Poppins',sans-serif;
+        span{
+            margin-left: 2rem;
+        }
     }
     &-lined{
         border-radius:25rem;
-        border: 1px solid $primary-blue-dark;
+        border: 1px solid $primary-black;
+        transition:all .18s ease-out;
+        a{
+            color:$primary-black;
+        }
+        &:hover{
+            transform: translate(.55rem,-.55rem);
+            box-shadow: -.55rem .55rem $primary-black;
+        }
     }
-    &-yellow{
-        border-radius: 25rem;
-        padding: 2rem 5rem;
-        background-color: $secondary-yellow;
+    &-lined__dark{
+        border-radius:25rem;
+        border: 1px solid $primary-black;
+        transition:all .18s ease-out;
+        background-color: $primary-white;
+        a{
+            color:$primary-black;
+        }
+        &:hover{
+            transform: translate(.55rem,-.55rem);
+            box-shadow: -.55rem .55rem $primary-black,-.57rem .57rem $primary-white;
+        }
     }
+    &-black{
+        border-radius:25rem;
+        transition:all .18s ease-out;
+        background-color: $primary-black;
+        a{
+            color: $primary-white;
+            font-weight: 400;
+            span{
+                margin-left: 3rem;
+            }
+        }
+        &:hover{
+            transform: translate(.55rem,-.55rem);
+            box-shadow: -.55rem .55rem $primary-white;
+        }
+    }
+    &-red{
+        border-radius:25rem;
+        transition:all .18s ease-out;
+        background-color: $primary-red;
+        a{
+            color: $primary-white;
+            font-weight: 400;
+            span{
+                margin-left: 3rem;
+            }
+        }
+        &:hover{
+            transform: translate(.55rem,-.55rem);
+            box-shadow: -.55rem .55rem $primary-black;
+        }
+    }
+
 }

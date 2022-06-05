@@ -1,0 +1,87 @@
+.work-ladder{
+    width:100%;
+    padding: 12rem 10rem;
+    background-color: $primary-black;
+    position: relative;
+    @media screen and (max-width:991px){
+        padding:20rem 5rem; 
+    }
+    &-section{
+        width: 100%;
+        height: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    &-row{
+        height: 100%;
+    }
+    &-col{
+        &__text{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            @media screen and (max-width:991px){
+                justify-content: flex-start;
+            }
+            .wl-text-container{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+                transform: translateY(100px);
+                h1{
+                    color: $primary-red;
+                    margin-bottom: 3.6rem;
+                    @media screen and (max-width:991px){
+                        max-width: 600px; 
+                    }
+                }
+                p{
+                    color: $primary-red;
+                    font-weight: 300;
+                    width: 80%;
+                    margin-bottom: 3.6rem;
+                    @media screen and (max-width:991px){
+                        max-width: 600px; 
+                    }
+                }
+            }
+        }
+        &__img{
+            
+            @media screen and (max-width:991px){
+                margin-top: 20rem;
+            }
+            .wl-image{
+                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+                transform: translateY(100px);
+                object-fit: cover;
+                width: 90%;
+                margin-left: 10%;
+                @media screen and (max-width:991px){
+                    width: 100%;
+                    height: 54rem;
+                    min-height: 500px;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    background-size: cover;
+                    margin-left: 0;
+                }
+            }
+            }
+        }
+    }
+.waves{
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 960/540;
+    width: 100%;
+    height: 18rem;
+    &-up{
+        background-image: url('http://clientele-savvy.local/wp-content/themes/clientele%20savvy/image/wave-up.svg');
+    }
+    &-down{
+        background-image: url('http://clientele-savvy.local/wp-content/themes/clientele%20savvy/image/wave-down.svg');
+    }
+}

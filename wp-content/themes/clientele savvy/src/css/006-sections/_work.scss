@@ -1,74 +1,91 @@
 .work{
     width: 100%;
     height: auto;
-    padding: 10rem;
-    background-color: $secondary-yellow-light;
-    border-top: 2px solid $primary-blue-dark;
-    border-bottom: 2px solid $primary-blue-dark;
+    margin-top: 16rem;
     &-container{
         width: 100%;
         height: auto;
+        max-width: 1800px;
+        margin: 0 auto;
     }
 
-    &-col{
-        &__text{
-            height: 72rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: column;
-            .work-list{
-                margin-bottom: 3.6rem !important;
-                &-items{
-                    color: $primary-blue-dark;
-                    font-family: 'Poppins',sans-serif;
-                    font-weight: 400;
-                    text-transform: capitalize;
-                    font-size: 2.4rem;
-                    .list-vector{
-                        margin-right: 2.4rem;
+    &-item{
+        padding: 0 20rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        @media screen and (max-width:1000px){
+            gap: 10rem;
+            padding: 0 10rem;
+        }
+        @media screen and (max-width:900px){
+            grid-template-columns:repeat(1,1fr);
+            padding: 0 5rem;
+        }
+        &__rev{
+            @media screen and (max-width:900px){
+                grid-template-areas:'up' 'down' ;
+                .work-item{
+                    &__img{
+                        grid-area: down;
                     }
-                    &:not(:last-child){
-                        margin-bottom: 5.6rem;
+                    &__text{
+                        grid-area: up  ;
                     }
                 }
             }
-            h1{
-                margin-bottom: 3.6rem;
-            }
+        }
 
+        gap: 20rem;
+        margin-bottom: 16rem;
+        &__text{
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            transform: translateY(100px);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @media screen and (max-width:900px){
+                justify-content: center;
+                align-items: center;
+            }
+            &-container{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                width: 90%;
+                @media screen and (max-width:900px){
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 600px;
+                }
+                h1{
+                    font-size: 4.8rem;
+                    font-weight: 400;
+                    margin-bottom: 2.4rem;
+                    @media screen and (max-width:900px){
+                        text-align: center;
+                    }
+                }
+                p{
+                    margin-bottom: 2.4rem;
+                    @media screen and (max-width:900px){
+                        text-align: center;
+                    }
+                }
+            }
         }
         &__img{
-            position: relative;
-            .work-img{
-                position: absolute;
-                top: 18rem;
-                right:20rem;
-                height: 55rem;
-                &__background{
-                    position: absolute;
-                    height: 55rem;
-                    &-1{
-                        top: 0;
-                        right: 0;
-                    }
-                    &-2{
-                        top: 3rem;
-                        right: 5rem;
-                    }
-                    &-3{
-                        top: 7rem;
-                        right: 9rem;
-                    }
-                    &-4{
-                        top: 9.8rem;
-                        right: 11.9rem;
-                    }
-                    &-5{
-                        top: 14rem;
-                        right: 16rem;
-                    }
-                }
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            transform: translateY(100px);
+            @media screen and (max-width:991px){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                width: 100%;
+                max-width: 71rem;
             }
         }
     }

@@ -11,7 +11,8 @@
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
     if(isset($_POST['email']) && $_POST['email']!=''){
-        $userName = $_POST['name'];
+        $userFName = $_POST['first-name'];
+        $userLName = $_POST['last-name'];
         $userEmail = $_POST['email'];
         $userNumber = $_POST['number'];
 
@@ -45,74 +46,83 @@
     get_header();
 ?>
 <!-- start of home section -->
-    <section class="home margin-bottom-big">
+    <section class="home ">
         <div class="container-fluid home-container">
             <div class="row">
             <div class="home-col__text col-12">
                 <h1 class="header-title">
-                    <span class="italics">apply</span> for a job where it <span class="italics">counts</span>
+                    apply for a job where it counts
                 </h1>
-                <p class="text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Assumenda et nihil, libero quia atque nulla fugiat eveniet dolores vitae 
-                    accusamus laborum dolor vero, alias, deserunt consequuntur at! Quidem.
-                </p>
-                <button class="btn btn-lined">
-                    <a href="#">
-                        apply for a job
-                        <span class="arrow">
-                            <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                        </span>
-                    </a>
-                </button>
+                <div class="sub-container">
+                    <p class="text-para home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Assumenda et nihil, libero quia atque nulla fugiat eveniet.consectetur adipisicing elit. 
+                        Assumenda et nihil
+                    </p>
+                    <button class="btn btn-red">
+                        <a href="#">
+                            apply for a job
+                            <span class="arrow">
+                                <img src="<?php echo get_theme_file_uri("/image/arrow-white.svg");?>" alt="">
+                            </span>
+                        </a>
+                    </button>
+                </div>
             </div>
             <div class="home-col__img col-12">
-                <img class="home-img" src="<?php echo get_theme_file_uri("/image/home-img.svg"); ?>" alt="">
+                <img class="home-img" src="<?php echo get_theme_file_uri("/image/home-img.png"); ?>" alt="">
             </div>
             </div>
         </div>
     </section>
 <!-- end of  home section -->
-<!-- start of contact section -->
-    <section class="contact">
-        <div class="container-fluid contact-section">
-            <div class="row contact-row">
-                <div class="contact-col__img col-xl-6 col-lg-12">
-                    <img class="contact-col__img contact-img" src="<?php echo get_theme_file_uri("/image/contact-img.svg"); ?>" alt="">
-                </div>
-                <div class="contact-col__text col-xl-6 col-lg-12">
-                    <div class="contact-text-container">
-                        <h1 class="header-primary">join the family of clientele savvy</h1>
-                        <p class="text-para">Lorem ipsum dolor sit amet, consectetur 
-                            adipisicing elit. Omnis assumenda aspernatur modi tenetur dolor 
-                            rem possimus!
+<!-- start of wl section -->
+
+    <section class="work-ladder">
+        <div class="container-fluid work-ladder-section">
+            <div class="row work-ladder-row">
+                <div class="work-ladder-col__text col-12 col-lg-6">
+                    <div class="wl-text-container">
+                        <h1 class="header-primary">
+                            Work yourself up the ladder and see the results
+                        </h1>
+                        <p class="text-para">
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Quidem delectus eius 
+                            in a quas, corrupti et debitis dolorem 
+                            maxime sequi neque libero? Corporis, sit 
+                            officia enim dignissimos amet illo, labore 
+                            consequatur quidem eum deserunt velit.
                         </p>
-                    </div>
-                    <form action="" method="post" class="form">
-                        <input id="name" name="name" class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
-                        <input id="number" name="number" class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
-                        <input id="email" name="email" class="form-input text-input" type="email" placeholder="Email" maxlength="40">
-                        <button id="btn" class="btn btn-lined">
-                            <a href="#">submit</a>
-                            <img src="<?php echo get_theme_file_uri("/image/arrow.svg"); ?>" alt="">
+                        <button class="btn btn-lined__dark">
+                            <a href="#">
+                                apply for a job
+                                <span class="arrow">
+                                    <img src="<?php echo get_theme_file_uri("/image/arrow-black.svg");?>" alt="">
+                                </span>
+                            </a>
                         </button>
-                    </form>
+                    </div>
+                </div>
+                <div class="work-ladder-col__img col-12 col-lg-6">
+                    <img class="wl-image" src="<?php echo get_theme_file_uri('/image/wl-image.png'); ?>" alt="">
                 </div>
             </div>
         </div>
     </section>
-<!-- end of contact section -->
+<!-- end of wl section -->
 <!-- start of services -->
     <section class="services">
         <div class="container-fluid services-container">
             <div class="row services-row">
                 <div class="col-12 services-col services-col__text">
-                    <h1 class="header-primary">incentive and allowances</h1>
+                    <h1 class="header-primary">incentive and allowances for you</h1>
+                    <p class="text-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam obcaecati pariatur libero ipsa vitae nobis veritatis voluptas sed exercitationem dolore?</p>
                 </div>
                 <div class="col-12 services-col services-col__grid">
                     <div class="grid">
                         <div class="grid-items grid-items__1">
                             <div class="grid-items__img">
-                                <img src="<?php echo get_theme_file_uri("./image/incentive-1.svg"); ?>" alt="">
+                                <img src="<?php echo get_theme_file_uri("./image/incentive.svg"); ?>" alt="">
                             </div>
                             <div class="grid-items__text">
                                 <div class="text-container">
@@ -121,14 +131,12 @@
                                         elit. Quaerat sequi quam quas itaque vitae vero?
                                     </p>
                                 </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span>
+                                <div class="line"></div>
                             </div>
                         </div>
                         <div class="grid-items grid-items__2">
                             <div class="grid-items__img">
-                                    <img src="<?php echo get_theme_file_uri("./image/salary.png"); ?>" alt="">
+                                    <img src="<?php echo get_theme_file_uri("./image/salary.svg"); ?>" alt="">
                             </div>
                             <div class="grid-items__text">
                                 <div class="text-container">
@@ -137,14 +145,12 @@
                                         elit. Quaerat sequi quam quas itaque vitae vero?
                                     </p>
                                 </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span>
+                                <div class="line"></div>
                             </div>
                         </div>
                         <div class="grid-items grid-items__3">
                             <div class="grid-items__img">
-                                    <img src="<?php echo get_theme_file_uri("./image/salary_increment.jpg"); ?>" alt="">
+                                    <img src="<?php echo get_theme_file_uri("./image/Group.svg"); ?>" alt="">
                             </div>
                             <div class="grid-items__text">
                                 <div class="text-container">
@@ -153,14 +159,12 @@
                                         elit. Quaerat sequi quam quas itaque vitae vero?
                                     </p>
                                 </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span>
+                                <div class="line"></div>
                             </div>
                         </div>
                         <div class="grid-items grid-items__4">
                             <div class="grid-items__img">
-                                    <img src="<?php echo get_theme_file_uri("./image/holiday.jpg"); ?>" alt="">
+                                    <img src="<?php echo get_theme_file_uri("./image/holiday.svg"); ?>" alt="">
                             </div>
                             <div class="grid-items__text">
                                 <div class="text-container">
@@ -169,14 +173,12 @@
                                         elit. Quaerat sequi quam quas itaque vitae vero?
                                     </p>
                                 </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span> 
+                                <div class="line"></div> 
                             </div>
                         </div>
                         <div class="grid-items grid-items__5">
                             <div class="grid-items__img">
-                                    <img src="<?php echo get_theme_file_uri("./image/attendance_allowance.jpg"); ?>" alt="">
+                                    <img src="<?php echo get_theme_file_uri("./image/cab.svg"); ?>" alt="">
                             </div>
                             <div class="grid-items__text">
                                 <div class="text-container">
@@ -185,25 +187,7 @@
                                         elit. Quaerat sequi quam quas itaque vitae vero?
                                     </p>
                                 </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="grid-items grid-items__6">
-                            <div class="grid-items__img">
-                                    <img src="<?php echo get_theme_file_uri("./image/cab.jpg"); ?>" alt="">
-                            </div>
-                            <div class="grid-items__text">
-                                <div class="text-container">
-                                    <h1 class="header-tertiary">1500 INR Attendance Allowance</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
-                                    </p>
-                                </div>
-                                <span class="arrow">
-                                    <img src="<?php echo get_theme_file_uri("/image/arrow.svg");?>" alt="">
-                                </span>
+                                <div class="line"></div>
                             </div>
                         </div>
                     </div>
@@ -216,72 +200,123 @@
     <section class="work">
         <div class="container-fluid work-container">
             <div class="row work-row">
-                <div class="col-6 work-col work-col__text">
-                        <h1 class="header-primary">we offer you something more than salary</h1>
-                        <ul class="work-list">
-                            <li class="work-list-items">
-                                <span class="list-vector">
-                                    <img src="<?php echo get_theme_file_uri("./image/equality-vector.svg"); ?>" alt="">
-                                </span> 
-                                we believe in gender equality
-                            </li>
-                            <li class="work-list-items">
-                                <span class="list-vector">
-                                    <img src="<?php echo get_theme_file_uri("./image/oppurtunity-vector.svg"); ?>" alt="">
-                                </span>
-                                endless opportunity to work yourself up the ladder
-                            </li>
-                            <li class="work-list-items">
-                                <span class="list-vector">
-                                    <img src="<?php echo get_theme_file_uri("./image/friendly-vector.svg"); ?>" alt="">
-                                </span>
-                                we keep a friendly work environment
-                            </li>
-                        </ul>
-                        <div class="btn btn-yellow">
-                            <a href="#" class="text-btn">
+               <div class="col-12 work-item work-item__1">
+                   <div class="work-item__text work-item__text__1">
+                       <div class="work-item__text-container">
+                            <h1 class="header-secondary">being with us is fun</h1>
+                            <p class="text-para">
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Asperiores maxime illum est voluptas 
+                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit.Asperiores 
+                            </p>
+                            <button class="btn btn-lined">
+                                <a href="#">
                                 apply for a job
-                            </a>
+                                <span class="arrow">
+                                    <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
+                                </span>
+                                </a>
+                            </button>
                         </div>
-                </div>
-                <div class="col-6 work-col work-col__img">
-                    <img class="work-img__background work-img__background-1 " src="<?php echo get_theme_file_uri("/image/work-1__background.png"); ?>" alt="">
-                    <img class="work-img__background work-img__background-2" src="<?php echo get_theme_file_uri("/image/work-1__background.png"); ?>" alt="">
-                    <img class="work-img__background work-img__background-3" src="<?php echo get_theme_file_uri("/image/work-1__background.png"); ?>" alt="">
-                    <img class="work-img__background work-img__background-4" src="<?php echo get_theme_file_uri("/image/work-1__background.png"); ?>" alt="">
-                    <img class="work-img__background work-img__background-5" src="<?php echo get_theme_file_uri("/image/work-1__background.png"); ?>" alt="">
-                    <img class="work-img" src="<?php echo get_theme_file_uri("/image/work-1.png"); ?>" alt="">
-                </div>
+                    </div>
+                   <div class="work-item__img work-item__img__1"><img src="<?php echo get_theme_file_uri("/image/slides-vector-1.svg"); ?>" alt=""></div>
+               </div>
+               <div class="col-12 work-item  work-item__rev work-item__2">
+                   <div class="work-item__img work-item__img__2"><img src="<?php echo get_theme_file_uri("/image/slides-vector-2.svg"); ?>" alt=""></div>
+                   <div class="work-item__text work-item__text__2">
+                       <div class="work-item__text-container">
+                            <h1 class="header-secondary">enjoy working with us</h1>
+                            <p class="text-para">
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Asperiores maxime illum est voluptas 
+                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit.Asperiores 
+                            </p>
+                            <button class="btn btn-lined">
+                                <a href="#">
+                                apply for a job
+                                <span class="arrow">
+                                    <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
+                                </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+               </div>
+               <div class="col-12 work-item work-item__3">
+                   <div class="work-item__text work-item__text__3">
+                       <div class="work-item__text-container">
+                            <h1 class="header-secondary">get great incentive</h1>
+                            <p class="text-para">
+                                Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Asperiores maxime illum est voluptas 
+                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit.Asperiores 
+                            </p>
+                            <button class="btn btn-lined">
+                                <a href="#">
+                                apply for a job
+                                <span class="arrow">
+                                    <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
+                                </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                   <div class="work-item__img work-item__img__3"><img src="<?php echo get_theme_file_uri("/image/slides-vector-3.svg"); ?>" alt=""></div>
+               </div>
             </div>
         </div>
     </section>
 <!-- end of work environment -->
+<!-- start of COA -->
+<section class="coa">
+    <div class="container-fluid coa-container">
+        <div class="coa-text">
+            <h1 class="coa-text-primary header-primary"> get a job </h1>
+            <p class="coa-text-para text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta at neque voluptatibus et ipsa maxime voluptate animi nostrum blanditiis!</p>
+            <button class="btn btn-black">
+                <a href="#">
+                submit
+                    <span class="arrow">
+                        <img src="<?php echo get_theme_file_uri("/image/arrow-white.svg");?>" alt="">
+                    </span>
+                </a>
+            </button>
+        </div>
+</div>
+</section>
+<!-- end of COA -->
 <!-- start of contact us -->
     <section class="contact-us">
+        <img class="contact-us__img" src="<?php echo get_theme_file_uri("/image/waves-up.svg");  ?>" alt="">
         <div class="contact-us-container container-fluid">
-            <div class="contact-us-row row">
-                <div class="contact-us-col-text col-5">
-                    <div class="text-container">
-                        <h1 class="header-primary">contact us for job opportunities</h1>
-                        <p class="text-para">Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Quae error aut reiciendis maiores 
-                            tempora omnis accusamus similique officiis fugiat rem!
-                        </p>
-                    </div>
-                    <form action="#" method="post" class="form">
-                        <input class="form-input text-input" type="text" placeholder="Name"  maxlength="24">
-                        <input class="form-input text-input" type="text" placeholder="Contact" pattern="[0-9]{10}" maxlength="10">
-                        <input class="form-input text-input" type="email" placeholder="Email" maxlength="40">
-                        <button class="btn btn-lined">
-                            <a href="#">submit</a>
-                            <img src="<?php echo get_theme_file_uri("/image/arrow.svg"); ?>" alt="">
+            <div class="contact-us-row ">
+              <div class="contact-us-text">
+                  <div class="contact-us-text-container">
+                      <h1 class="header-primary">contact to work with us</h1>
+                      <p class="text-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero iusto ipsa iste delectus temporibus earum eveniet.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.adipisicing elit. Libero iusto ipsa iste delectus
+                      </p>
+                  </div>
+              </div>
+              <div class="contact-us-form">
+                  <form action="" class="form">
+                      <input class="text-input" name="first-name" type="text" placeholder="first name" id="first-name">
+                      <input class="text-input" name="last-name" type="text" placeholder="last name" id="last-name">
+                      <input class="text-input" name="number" type="text" placeholder="contact number" id="number">
+                      <input class="text-input" name="email" type="text" placeholder="email" id="email" >
+                      <button class="btn btn-lined__dark" id="btn">
+                            <a href="#">
+                                apply for a job
+                                <span class="arrow">
+                                    <img src="<?php echo get_theme_file_uri("/image/arrow-black.svg");?>" alt="">
+                                </span>
+                            </a>
                         </button>
-                    </form>
-                </div>
-                <div class="contact-us-col-img col-7">
-                    <img class="contact-us-background" src="<?php echo get_theme_file_uri("./image/contact-us-background.svg"); ?>" alt="">
-                    <img class="contact-us-img" src="<?php echo get_theme_file_uri("./image/contact-us-img.jpg"); ?>" alt="">
-                </div>
+                  </form>
+              </div>
             </div>
         </div>
     </section>

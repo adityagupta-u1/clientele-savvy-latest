@@ -4,20 +4,32 @@
     }
   }
   
-@media screen and (max-width: 1690px) {
+
+  @media screen and (max-width: 1600px) {
     html {
-      font-size: 56.25%;
-    }
-  }
-  @media screen and (max-width: 1400px) {
-    html {
-      font-size: 48%;
+      font-size: 51%;
     }
   }
   
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1440px) {
     html {
       font-size: 41.75%;
     }
   }
+  @media screen and (max-width: 1200px) {
+    html {
+      font-size: 34.75%;
+    }
+  }
   
+  @media screen and (max-width: 900px) {
+    html {
+      font-size: 32.75%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 31.75%;
+    }
+  }
+

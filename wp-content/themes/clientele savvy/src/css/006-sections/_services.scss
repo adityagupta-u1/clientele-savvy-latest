@@ -1,68 +1,90 @@
 .services{
     width: 100%;
     height: auto;
+    margin-bottom: 16rem;
     &-container{
         width: 100%;
         height: auto;
+        max-width: 1800px;
+        margin: 0 auto;
     }
     &-col{
         padding: 10rem;
+        @media screen and (max-width:900px){
+            padding:5rem; 
+        }
 
         &__text{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 10rem;
+            margin-bottom: 8rem;
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            transform: translateY(100px);
             h1{
                 text-align: left;
-                width:40%
+                width:50%;
+                @media screen and (max-width:900px) {
+                    width: 90%;
+                }
+            }
+            P{
+                width: 40%;
+                @media screen and (max-width:900px) {
+                    width: 70%;
+                }
             }
         }
         &__grid{
-            padding: 0 14rem;
-            padding-bottom: 10rem;
+            padding: 0 10rem 10rem 20rem;
+            @media screen and (max-width:900px){
+                padding:0 5rem 5rem 10rem; 
+            }
             .grid{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                @media  screen and (max-width:1300px) {
-                    grid-template-columns: repeat(2, 1fr);
+                @media screen and (max-width:900px){
+                    grid-template-columns:repeat(2,1fr);
                 }
-                gap: 4.8rem;
+                @media screen and (max-width:560px){
+                    grid-template-columns:repeat(1,1fr);
+                }
+                gap: 18rem;
                 &-items{
-                    width: 100%;
-                    height: 72rem;
-                    border-radius: 24px;
-                    border: 2px solid $primary-blue-dark;
-                    position: relative;
+                    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+                    transform: translateY(100px);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     &__img{
-                        width: 100%;
-                        height:60%;
-                        border-bottom: 2px solid $primary-blue-dark;
-                        border-radius: 22px 22px 0 0 ;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 22px 22px 0 0;
-                                object-fit: cover;
-                            }
-                    }
-                    &__text{
-                        width: 100%;
-                        height:40%;
-                        border-radius: 0 0 22px 22px;
-                        padding: 2rem;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        h1{
-                            margin-right: 2.4rem;
-                            margin-bottom: .8rem;
-                        }
-                        .arrow{
-                            align-self: flex-end;
+                        margin-bottom: 2.4rem;
+                        width: 10rem;
+                        height: 10rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
                         }
                     }
+                    h1{
+                        margin-bottom: 2.4rem;
+                        font-weight: 500;
+                    }
+                    p{
+                        margin-bottom: 2.4rem;
+                    }
+                    .line{
+                        width: 50%;
+                        height: 4px;
+                        border-bottom: 2px solid $primary-black;
+                    }
+                   
                 }
             }
         }
     }
 }
 .text-container{
-    width: 100%;
+    width: 90%;
 }

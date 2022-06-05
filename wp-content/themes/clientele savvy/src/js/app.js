@@ -1,12 +1,15 @@
 import 'bootstrap'
 import $, { event } from 'jquery'
+import './nav'
+import './animations'
 
 let loc = location.href
 let front_page = 'http://clientele-savvy.local/'
 
 if (loc == front_page) {
   document.getElementById('btn').addEventListener('click', (event) => {
-    var name = document.getElementById('name')
+    var Fname = document.getElementById('first-name')
+    var Lname = document.getElementById('last-name')
     var email = document.getElementById('email')
     var number = document.getElementById('number')
  
@@ -16,7 +19,8 @@ if (loc == front_page) {
           method: 'POST',
           dataType: 'json',
           data: {
-            name: name.val(),
+            Fname: Fname.val(),
+            Lname: Lname.val(),
             email: email.val(),
             number: number.val(),
           },
@@ -27,4 +31,6 @@ if (loc == front_page) {
     }
   })
 }
+
+
 

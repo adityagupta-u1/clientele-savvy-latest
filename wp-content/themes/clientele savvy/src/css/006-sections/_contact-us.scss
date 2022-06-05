@@ -1,50 +1,82 @@
 .contact-us{
     width: 100%;
     height: auto;
-    padding: 10rem;
-    border-bottom: 2px solid $primary-blue-dark;
+    padding: 16rem 10rem;
+    background: $primary-black;
+    position: relative;
+    @media screen and (max-width:768px){
+        padding: 16rem 5rem;
+    }
+    &__img{
+        position: absolute;
+        top: -8rem;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+    }
     &-container{
         width: 100%;
         height: auto;
+        max-width: 1800px;
+        margin: 0 auto;
     }
-    &-col{
-        &-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 80rem;
-            .text-container{
-                h1{
-                    margin-bottom: 2.4rem;
-                }
-                p{
-                    width: 80%;
-                }
-            }
-            .form{
-                .btn{
-                    @include flex;
-                    img{
-                        background-color: $primary-white;
-                        width: 2.4rem;
-                        align-items: flex-end;
-                    }
-                }
-            }
+    &-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10vw;
+        @media screen and (max-width:900px) {
+            grid-template-columns: 1fr;
         }
-        &-img{
-            position: relative;
-            @include flex;
-            .contact-us{
-                &-background{
-                    position: absolute;
-                    height: 100%;
-                    top: 4rem;
-                    left: 27rem;
+    }
+    &-text{
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transform: translateY(100px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &-container{
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            @media screen and (max-width:900px) {
+                max-width: 500px;
+            }
+            h1{
+                color: $primary-red;
+            }
+            p{
+                color: $primary-red;
+            }
+
+        }
+    }
+    &-form{
+        .form{
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            transform: translateY(100px);
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 4rem;
+            input{
+                padding: 2rem;
+                border: 1px solid $primary-white;
+                background: $primary-black;
+                font-weight: 400;
+                border-radius: 25rem;
+                color: $primary-white;
+                outline: none;
+                &::placeholder{
+                    color: $primary-white;
                 }
-                &-img{
-                    position: absolute;
-                    height: 100%;
+            }
+            .btn{
+                width: 100%;
+                padding: 2rem;
+                img{
+                    background-color: transparent;
                 }
             }
         }

@@ -1,0 +1,52 @@
+.coa{
+    width: 100%;
+    height: auto;
+    padding: 10rem;
+    margin-top: -8rem;
+    @media  screen and (max-width:764px) {
+        padding: 10rem 5rem;
+    }
+    &-container{
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transform: translateY(100px);
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg ,$primary-red,$primary-orange );
+        padding: 10rem;
+        @include flex;
+        flex-direction: column;
+        border-radius:4em;
+        min-height: 60rem;
+        max-width: 1800px;
+        margin: 0 auto;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url('http://clientele-savvy.local/wp-content/themes/clientele%20savvy/image/coa-bg.svg');
+            z-index: 1;
+        }
+    }
+
+
+    &-text{
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transform: translateY(100px);
+        @include flex;
+        flex-direction: column;
+        max-width: 800px;
+        &-primary{
+            color: $primary-white;
+            text-align: center;
+            margin-bottom: 2.8rem;
+        }
+        &-para{
+            color:$primary-white;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 2.8rem;
+            font-weight: 300;
+        }
+
+    }
+}

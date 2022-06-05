@@ -1,38 +1,38 @@
 .header{
 
     &-title{
-        font-family:'Lora',serif;
-        color:$primary-blue-dark;
-        font-size: 10rem;
+        font-family:'Poppins',sans-serif;
+        color:$primary-black;
+        font-size: 8.8rem;
         line-height:145%;
-        font-weight:500;
+        font-weight:400;
         text-transform: capitalize;
     }
 
     &-primary{
-        font-family:'Lora',serif;
-        color:$primary-blue-dark;
+        font-family:'Poppins',sans-serif;
+        color:$primary-black;
         font-size:6.4rem;
         line-height:145%;
-        font-weight:700;
+        font-weight:400;
         text-transform: capitalize;
     }
 
     &-secondary{
-        font-family:'Lora',serif;
-        color:$primary-blue-dark;
+        font-family:'Poppins',sans-serif;
+        color:$primary-black;
         font-size:3.6rem;
         line-height:135%;
-        font-weight:700;
+        font-weight:600;
         text-transform: capitalize;
     }
 
     &-tertiary{
-        font-family:'Lora',serif;
-        color:$primary-blue-dark;
+        font-family:'Poppins',sans-serif;
+        color:$primary-black;
         font-size:3.2rem;
         line-height:145%;
-        font-weight:700;
+        font-weight:600;
         text-transform: capitalize;
     }
 }
@@ -41,33 +41,33 @@
 
     &-para{
         font-family: "Poppins", sans-serif;
-        color: $primary-blue-dark;
-        font-size: 2rem;
-        line-height: 160%;
-        font-weight: 500;
+        color: $primary-black;
+        font-size: 1.8rem;
+        line-height: 180%;
+        font-weight: 400;
         text-transform: lowercase;
     }
 
     &-btn{
         font-family:'Poppins',sans-serif;
-        color:$primary-blue-dark;
-        font-size:2.0rem;
+        color:$primary-black;
+        font-size:1.8rem;
         line-height:160%;
         font-weight:600;
         text-transform: capitalize;
 
     }
     &-small{
-        font-family:'Lora',sans-serif;
-        color:$primary-blue-dark;
-        font-size:1.6rem;
+        font-family:'Poppins',sans-serif;
+        color:$primary-black;
+        font-size:1.8rem;
         line-height:160%;
         font-weight:500;
         text-transform: capitalize;
     }
     &-input{
-        font-family: 'Lora',serif;
-        color: $primary-blue-dark;
+        font-family: 'Poppins',sans-serif;
+        color: $primary-black;
         font-size: 2.4rem;
         font-weight: 700;
     }
