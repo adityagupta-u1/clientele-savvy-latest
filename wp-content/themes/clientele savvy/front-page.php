@@ -18,8 +18,7 @@
 
         try {
             //Server settings       
-            $mail->isSMTP(); 
-            $mail->SMTPDebug = 4;    
+            $mail->isSMTP();   
             $mail-> SMTPAuth = false;                         
             $mail->Port      = 25;
             $mail->Host      = 'localhost';
