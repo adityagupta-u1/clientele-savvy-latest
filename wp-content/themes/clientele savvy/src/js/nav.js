@@ -1,6 +1,6 @@
 //nav animation
 
-window.onload=function(){
+
     let hamburger = document.querySelector("#ham")
     let navLinks=document.querySelector(".nav-links")
     let navLinksList=document.querySelectorAll(".nav-links__list")
@@ -52,9 +52,9 @@ window.onload=function(){
       });
     }
     else{
-      navLinks.style.clipPath = 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
+      navLinks.style.clipPath = 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
       navLinksList.forEach( links => {
-        links.style.clipPath = "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)"
+        links.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
         links.style.transform = "translateY(100px)"
         console.log(links.style.clipPath)
       });
@@ -64,5 +64,5 @@ window.onload=function(){
   //nav toggle
 
 
-}
+
 

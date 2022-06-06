@@ -40,9 +40,7 @@
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo "Mail has been sent successfully!";
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
    
@@ -293,7 +291,6 @@
 <!-- end of COA -->
 <!-- start of contact us -->
     <section class="contact-us">
-        <img class="contact-us__img" src="<?php echo get_theme_file_uri("/image/waves-up.svg");  ?>" alt="">
         <div class="contact-us-container container-fluid">
             <div class="contact-us-row ">
               <div class="contact-us-text">
