@@ -18,7 +18,8 @@
 
         try {
             //Server settings       
-            $mail->isSMTP();   
+            $mail->isSMTP(); 
+  
             $mail-> SMTPAuth = false;                         
             $mail->Port      = 25;
             $mail->Host      = 'localhost';
@@ -35,7 +36,7 @@
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Here is the subject';
-            $mail->Body    = "From"." ".$userFName."".$userLName":" "the number is".$userNumber."and the email is ".$userEmail;
+            $mail->Body    = "From"." ".$userName.":".$userNumber;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
