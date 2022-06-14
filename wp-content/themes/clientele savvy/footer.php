@@ -6,10 +6,18 @@
                 <div class="footer-col__text">
                     <h1 class="header-secondary">clientele savvy</h1>
                     <ul class="links">
-                        <li class="links-item text-para">home</li>
-                        <li class="links-item text-para">about</li>
-                        <li class="links-item text-para">contact</li>
-                        <li class="links-item text-para">privacy policy</li>
+                        <li class="links-item text-para">
+                            <a href="<?php echo site_url(); ?>">home</a>
+                        </li>
+                        <li class="links-item text-para">
+                            <a href="<?php echo site_url('/about'); ?>">about</a>
+                        </li>
+                        <li class="links-item text-para">
+                            <a href="<?php echo site_url('/contact'); ?>">contact</a>
+                        </li>
+                        <li class="links-item text-para">
+                            <a href="<?php echo site_url('/privacy-policy'); ?>">privacy policy</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-col__contact">
@@ -18,13 +26,19 @@
                     <p class="text-para">clientelesavvy@clientelesavvy.com</p>
                     <ul class="social">
                         <li class="social-links ">
-                            <img src="<?php echo get_theme_file_uri("./image/facebook.svg"); ?>" alt="">
+                            <a href="#">
+                                <img src="<?php echo get_theme_file_uri("./image/facebook.svg"); ?>" alt="">
+                            </a>
                         </li>
                         <li class="social-links">
-                            <img src="<?php echo get_theme_file_uri("./image/instagram.svg"); ?>" alt="">
+                            <a href="<?php echo site_url(); ?>">
+                                <img src="<?php echo get_theme_file_uri("./image/instagram.svg"); ?>" alt="">
+                            </a>
                         </li>
                         <li class="social-links ">
-                            <img src="<?php echo get_theme_file_uri("./image/linkedin.svg"); ?>" alt="">
+                            <a href="<?php echo site_url(); ?>">
+                                <img src="<?php echo get_theme_file_uri("./image/linkedin.svg"); ?>" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>

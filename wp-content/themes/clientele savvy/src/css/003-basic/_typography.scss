@@ -1,5 +1,11 @@
 .header{
-
+    &-page{
+        font-family:'Poppins',sans-serif;
+        font-size: 10vw;
+        line-height:145%;
+        font-weight:400;
+        text-transform: uppercase;
+    }
     &-title{
         font-family:'Poppins',sans-serif;
         color:$primary-black;

@@ -1,0 +1,111 @@
+.pageabout{
+    width: 100%;
+    height: auto;
+    &-container{
+        width: 100%;
+        height: auto;
+        padding: 10rem;
+    }
+    &-header{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 8rem;
+        margin-bottom: 16rem;
+        &-img{
+            display: flex;
+            flex-direction: row;
+            .header-page{
+                width: 1ch;
+                color: $primary-red;
+                line-height: 96%;
+                font-weight: 600;
+                font-size: 14rem;
+                &__1{
+                    color: rgba($primary-red,1);
+                    margin-right: 8rem;
+                }
+                &__2{
+                    color: rgba($primary-red,.7);
+                    margin-right: 8rem;
+                }
+                &__3{
+                    color: rgba($primary-red,.4);
+                    margin-right: 8rem;
+                }
+                &__4{
+                    color: rgba($primary-red,.2);
+                }
+            }
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            h1{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 2.4rem;
+                line-height: 180%;
+                font-weight: 400;
+                text-transform: lowercase;
+                width: 80%;
+            }
+        }
+        
+    }
+    &-img{
+        width: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 16rem;
+    }
+
+    &-info{
+        width: 100%;
+        height: auto;
+        background-color: $primary-black;
+        .pab-info{
+            &-container{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding: 10rem;
+            }
+            &-text{
+                width: 40%;
+                margin-right: 36rem;
+                min-height: 50vh;
+                h1{
+                    color: $primary-white;
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+.red{
+    color: $primary-red;
+}
+
+
+.pb-coa{
+    background-color: $primary-black;
+}
+.pb-beliefs{
+    background-color: $primary-black;
+    margin-bottom: 0;
+    h1{
+        color: $primary-white;
+    }
+    p{
+        color: $primary-white;
+    }
+}

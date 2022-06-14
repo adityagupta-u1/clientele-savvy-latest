@@ -44,6 +44,9 @@
                 &-item{
                     color:$primary-red;
                     text-transform: uppercase;
+                    a{
+                        color: $primary-red;
+                    }
                     &:not(:last-child){
                         margin-bottom: 1.6rem;
                     }

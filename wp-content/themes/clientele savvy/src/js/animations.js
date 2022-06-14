@@ -197,3 +197,22 @@ window.onload = ()=>{
     )
 
 }
+
+//about page 
+
+
+
+
+let sections = gsap.utils.toArray(".beliefs-items");
+
+let scrollTween = gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none", // <-- IMPORTANT!
+    scrollTrigger: {
+      trigger: ".pb-beliefs-scrollbar",
+      start: "center center",
+      pin: true,
+      scrub: 0.1,
+      end: "+=3000"
+    }
+});

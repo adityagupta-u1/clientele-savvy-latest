@@ -16,6 +16,8 @@
         $userEmail = $_POST['email'];
         $userNumber = $_POST['number'];
 
+        if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+
         try {
             //Server settings       
             $mail->isSMTP(); 
@@ -43,6 +45,7 @@
         } catch (Exception $e) {
         }
     }
+}
    
     get_header();
 ?>
@@ -55,12 +58,11 @@
                     apply for a job where it counts
                 </h1>
                 <div class="sub-container">
-                    <p class="text-para home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Assumenda et nihil, libero quia atque nulla fugiat eveniet.consectetur adipisicing elit. 
-                        Assumenda et nihil
+                    <p class="text-para home-text">
+                    Clientele savvy is an international BPO, which has been in this sector and is providing value for a long time. We are looking forward to working with you.
                     </p>
                     <button class="btn btn-red">
-                        <a href="#">
+                        <a href="<?php echo site_url('/contact');?>">
                             apply for a job
                             <span class="arrow">
                                 <img src="<?php echo get_theme_file_uri("/image/arrow-white.svg");?>" alt="">
@@ -87,16 +89,16 @@
                             Work yourself up the ladder and see the results
                         </h1>
                         <p class="text-para">
-                            Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Quidem delectus eius 
-                            in a quas, corrupti et debitis dolorem 
-                            maxime sequi neque libero? Corporis, sit 
-                            officia enim dignissimos amet illo, labore 
-                            consequatur quidem eum deserunt velit.
+                            Clientele savvy is an Indian business generation and 
+                            development unit of a UK Based company, which suggests 
+                            financial aid to UK residents and help them manage their
+                            unsecured debts. We based on their income and family size
+                            suggest them the best financial programmes to help them 
+                            get back in the driver’s seat of life
                         </p>
                         <button class="btn btn-lined__dark">
-                            <a href="#">
-                                apply for a job
+                            <a href="<?php echo site_url('/about'); ?>">
+                                read more
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-black.svg");?>" alt="">
                                 </span>
@@ -117,7 +119,9 @@
             <div class="row services-row">
                 <div class="col-12 services-col services-col__text">
                     <h1 class="header-primary">incentive and allowances for you</h1>
-                    <p class="text-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam obcaecati pariatur libero ipsa vitae nobis veritatis voluptas sed exercitationem dolore?</p>
+                    <p class="text-para">
+                        check out the incentive and allowances that we provide you in clientele savvy
+                    </p>
                 </div>
                 <div class="col-12 services-col services-col__grid">
                     <div class="grid">
@@ -128,8 +132,8 @@
                             <div class="grid-items__text">
                                 <div class="text-container">
                                     <h1 class="header-tertiary">Amazing monthly & Weekly Incentives</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
+                                    <p class="text-para">
+                                        You will get amazing incentives based on your sales at the end of the month and also weekly incentives based on your performance
                                     </p>
                                 </div>
                                 <div class="line"></div>
@@ -142,8 +146,8 @@
                             <div class="grid-items__text">
                                 <div class="text-container">
                                     <h1 class="header-tertiary">Generous Salary Packages</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
+                                    <p class="text-para">
+                                        we provide you generous salary according to your experience and potential
                                     </p>
                                 </div>
                                 <div class="line"></div>
@@ -156,8 +160,8 @@
                             <div class="grid-items__text">
                                 <div class="text-container">
                                     <h1 class="header-tertiary">Salary Increment in every six months</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
+                                    <p class="text-para">
+                                        you can get your salary incremented in every six months, being one of the many perks of staying with the company
                                     </p>
                                 </div>
                                 <div class="line"></div>
@@ -170,8 +174,8 @@
                             <div class="grid-items__text">
                                 <div class="text-container">
                                     <h1 class="header-tertiary">Saturdays & Sundays are complete off</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
+                                    <p class="text-para">
+                                        You will be able to enjoy your weekends as Saturday and Sunday will be completely off for you.  
                                     </p>
                                 </div>
                                 <div class="line"></div> 
@@ -184,8 +188,8 @@
                             <div class="grid-items__text">
                                 <div class="text-container">
                                     <h1 class="header-tertiary">1500 INR Attendance Allowance</h1>
-                                    <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                                        elit. Quaerat sequi quam quas itaque vitae vero?
+                                    <p class="text-para">
+                                        if you don’t have any personal means of transport, we have CAB pickup and drop facility for you
                                     </p>
                                 </div>
                                 <div class="line"></div>
@@ -206,13 +210,10 @@
                        <div class="work-item__text-container">
                             <h1 class="header-secondary">being with us is fun</h1>
                             <p class="text-para">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Asperiores maxime illum est voluptas 
-                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit.Asperiores 
+                                we as a company believe in discipline but there is no issue with having fun, because nobody likes to work at a boring place even us.
                             </p>
                             <button class="btn btn-lined">
-                                <a href="#">
+                                <a href="<?php echo site_url('/contact'); ?>">
                                 apply for a job
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
@@ -229,13 +230,10 @@
                        <div class="work-item__text-container">
                             <h1 class="header-secondary">enjoy working with us</h1>
                             <p class="text-para">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Asperiores maxime illum est voluptas 
-                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit.Asperiores 
+                                We make work place fun, so that you can come back every morning with a fresh mind and willingness to work
                             </p>
                             <button class="btn btn-lined">
-                                <a href="#">
+                                <a href="<?php echo site_url('/contact'); ?>">
                                 apply for a job
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
@@ -250,13 +248,10 @@
                        <div class="work-item__text-container">
                             <h1 class="header-secondary">get great incentive</h1>
                             <p class="text-para">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Asperiores maxime illum est voluptas 
-                                exercitationem tenetur minus!.Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit.Asperiores 
+                                you get great no of incentive and allowance such as monthly incentive, weekly incentive, 1500 INR attendance allowance, food allowance and so much more
                             </p>
                             <button class="btn btn-lined">
-                                <a href="#">
+                                <a href="<?php echo site_url('/contact'); ?>">
                                 apply for a job
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-red.svg");?>" alt="">
@@ -276,9 +271,11 @@
     <div class="container-fluid coa-container">
         <div class="coa-text">
             <h1 class="coa-text-primary header-primary"> get a job </h1>
-            <p class="coa-text-para text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta at neque voluptatibus et ipsa maxime voluptate animi nostrum blanditiis!</p>
+            <p class="coa-text-para text-para">
+                Get a job at clientele savvy by either contacting us at or by submitting you details through are contact form
+            </p>
             <button class="btn btn-black">
-                <a href="#">
+                <a href="<?php echo site_url('/contact'); ?>">
                 submit
                     <span class="arrow">
                         <img src="<?php echo get_theme_file_uri("/image/arrow-white.svg");?>" alt="">
@@ -296,8 +293,8 @@
               <div class="contact-us-text">
                   <div class="contact-us-text-container">
                       <h1 class="header-primary">contact to work with us</h1>
-                      <p class="text-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero iusto ipsa iste delectus temporibus earum eveniet.
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.adipisicing elit. Libero iusto ipsa iste delectus
+                      <p class="text-para">
+                        You can contact us either by calling us, emailing us or by submitting us your details through our contact form, you can also contact us through or social media handles
                       </p>
                   </div>
               </div>
@@ -308,7 +305,7 @@
                       <input class="text-input" name="number" type="text" placeholder="contact number" id="number">
                       <input class="text-input" name="email" type="text" placeholder="email" id="email" >
                       <button class="btn btn-lined__dark" id="btn">
-                                apply for a job
+                                submit
                                 <span class="arrow">
                                     <img src="<?php echo get_theme_file_uri("/image/arrow-black.svg");?>" alt="">
                                 </span>
