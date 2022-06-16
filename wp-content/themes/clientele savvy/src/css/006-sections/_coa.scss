@@ -19,13 +19,6 @@
         min-height: 60rem;
         max-width: 1800px;
         margin: 0 auto;
-        &::before{
-            content: '';
-            width: 100%;
-            height: 100%;
-            background-image: url('http://clientele-savvy.local/wp-content/themes/clientele%20savvy/image/coa-bg.svg');
-            z-index: 1;
-        }
     }
 
 
